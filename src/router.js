@@ -1,22 +1,35 @@
-import Vue from 'vue';
-import VueRouter from 'vue-router';
-
-import FundamentosComponent from './components/FundamentosComponent.vue';
-import HelloWorld from './components/HelloWorld.vue';
-import CalendarComponent from './components/CalendarComponent.vue';
-import TailwindTest from './components/TailwindTest.vue';
+import Vue from "vue";
+import VueRouter from "vue-router";
 
 const routes = [
-    { path: '/fundamentos', component: FundamentosComponent },
-    { path: '/helloworld', component: HelloWorld },
-    { path: '/calendar', component: CalendarComponent },
-    { path: '/tailwindtest', component: TailwindTest }
+  {
+    path: "/",
+    component: () => import("@/views/WebView.vue"),
+    children: [
+      {
+        path: "",
+        component: () => import("@/components/web/HelloWorld.vue"),
+      },
+      {
+        path: "fundamentos",
+        component: () => import("@/components/web/FundamentosComponent.vue"),
+      },
+      {
+        path: "calendar",
+        component: () => import("@/components/web/CalendarComponent.vue"),
+      },
+      {
+        path: "tailwindtest",
+        component: () => import("@/components/web/TailwindTest.vue"),
+      },
+    ],
+  },
 ];
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
-    routes
+  routes,
 });
 
 export default router;
