@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="bg-black text-white">
+    <div id="app">
+      <router-link to="/calendar">Calendario</router-link>
+      <router-link to="/fundamentos">Fundamentos</router-link>
+      <router-link to="/helloworld">Helloworld</router-link>
+      <router-link to="/tailwindtest">TailwindTest</router-link>
+      <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+  data() {
+    return {
+      isDarkMode: true, // Cambia esta variable según tus necesidades
+    };
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+body {
+  background-color: black;
+  color: white;
 }
 </style>
