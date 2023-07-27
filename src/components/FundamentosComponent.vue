@@ -1,12 +1,40 @@
 <template>
-    <div>
-        <h1>Fundamentos</h1>
-        <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80">
-    </div>
+    <section class="bg-black-50">
+        <div class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
+            <div class="mx-auto max-w-xl text-center">
+                <h1 class="text-3xl font-extrabold sm:text-5xl">
+                    Understand User Flow.
+                    <strong class="font-extrabold text-red-700 sm:block">
+                        Increase Conversion.
+                    </strong>
+                </h1>
+
+                <p class="mt-4 sm:text-xl/relaxed">
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo
+                    tenetur fuga ducimus numquam ea!
+                </p>
+
+                <div class="mt-8 flex flex-wrap justify-center gap-4">
+                    <a
+                        class="block w-full rounded px-12 py-3 text-sm font-medium text-red-600 shadow hover:text-red-700 focus:outline-none focus:ring active:text-red-500 sm:w-auto"
+                        href="/helloword"
+                    >
+                        Hello world
+                    </a>
+                    <a
+                        class="block w-full rounded bg-red-600 px-12 py-3 text-sm font-medium text-white shadow hover:bg-red-700 focus:outline-none focus:ring active:bg-red-500 sm:w-auto"
+                        href="/tailwindtest"
+                    >
+                        Tailwind Test
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 </template>
 
 <script>
-export default {
+module.exports = {
     name: 'MiComponenteBasico'
 }
 </script>
